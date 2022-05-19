@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Chat"
+        android:fontFamily="@font/podkova_extrabold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPersonName2"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/meneger_name"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Валерия"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2"
+        app:srcCompat="@drawable/ic_profile_icon" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/imageView12"
+        app:srcCompat="@drawable/ic_operator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="339dp"
+        android:layout_height="457dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/ic_profile_icon" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:srcCompat="@drawable/ic_user" />
+
+    <EditText
+        android:id="@+id/editTextPersonName5"
+        android:layout_width="338dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/chat_send"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:inputType="textPersonName"
+        android:paddingStart="14dp"
+        android:text="Сообщение пользователя"
+        android:textColor="@color/textchat"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPersonName6"
+        android:layout_width="453dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/bottom_pan"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text=""
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName5" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_home" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_account_box" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_room_ic" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_question_answer" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="47dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName5"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName5"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName5"
+        app:srcCompat="@drawable/sent" />>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

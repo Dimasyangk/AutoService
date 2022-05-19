@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/podkova"
+        android:text="@string/ChangePass"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text="Введите старый пароль"
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <EditText
+        android:id="@+id/editTextPersonName2"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text="Введите новый пароль"
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
+
+    <EditText
+        android:id="@+id/editTextPersonName3"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text="Введите новый пароль ещё раз"
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ChangePassButton"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_shape6"
+        android:text="Изменить пароль"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName3" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/podkova"
+        android:text="@string/ChangeNumEmailCity"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangePassButton" />
+
+    <EditText
+        android:id="@+id/editTextPersonName4"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text="Введите пароль"
+        android:textColor="@color/ColorRect"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/editTextPersonName5"
+        android:layout_width="347dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text="Введите ваш город, новую почту или номер телефона"
+        android:textColor="@color/ColorRect"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Change"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_shape2"
+        android:text="Изменить"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName5" />
+
+    <EditText
+        android:id="@+id/editTextPersonName6"
+        android:layout_width="453dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="77dp"
+        android:background="@drawable/bottom_pan"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:text=""
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Change" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_home" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_account_box" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_room_ic" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:srcCompat="@drawable/ic_question_answer" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName2"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName2"
+        app:srcCompat="@drawable/ic_eye_icon" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName3"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName3"
+        app:layout_constraintTop_toTopOf="@+id/editTextPersonName3"
+        app:srcCompat="@drawable/ic_eye_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

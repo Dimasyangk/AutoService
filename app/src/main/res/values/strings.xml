@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">AutoService</string>
+    <string name="Registration">Зарегистрируйтесь!</string>
+    <string name="QuestionReg">У вас ещё нет аккаунта?</string>
+    <string name="Welcome"><u>Добро пожаловать!</u></string>
+    <string name="ForgotPas">Забыли пароль?</string>
+    <string name="RegistrationPage"><u>Регистрация</u></string>
+    <string name="RegistrationButton">Зарегистрироваться</string>
+    <string name="ForgotPassword">Забыли пароль?</string>
+    <string name="RecoverButton">Восстановить</string>
+    <string name="TextUnderRecover">Введите код, который был отправлен на электронную почту</string>
+    <string name="ContinueButton">Продолжить</string>
+    <string name="ButtonMain">Войти</string>
+    <string name="ServiceRecord">Запись на обслуживание</string>
+    <string name="ServiceRecords">Записи на обслуживание</string>
+    <string name="Record">Записаться</string>
+    <string name="RecordWarning">Эти поля заполнятся автоматически, если они заполнены у вас в профиле</string>
+    <string name="Profile">Профиль</string>
+    <string name="PersonalInf">Личные Данные</string>
+    <string name="MyRecord">Мои записи</string>
+    <string name="Trouble">Если вы по каким-то причинам не можете записаться в приложении, позвоните по номеру телефона +7 (909) 909-99-00</string>
+    <string name="AboutAvto">Данные об авто</string>
+    <string name="ChangeInf">Изменить личные данные профиля</string>
+    <string name="Donejob">Информация о выполненных работах</string>
+    <string name="Auto">Автомобиль:</string>
+    <string name="AutoInf">Ваз 2113(К892АУ 790)</string>
+    <string name="ChangePass"><u>Вы хотите изменить пароль?</u></string>
+    <string name="ChangeNumEmailCity"><u>Вы хотите изменить номер телефона, почту или город?</u></string>
+    <string name="AddAutoInf">Добавление данных об авто</string>
+    <string name="AutoServiceMap">Автосервисы на карте</string>
+    <string name="Chat">Чат с менеджером</string>
+</resources>
