@@ -29,4 +29,5 @@
     <string name="AddAutoInf">Добавление данных об авто</string>
     <string name="AutoServiceMap">Автосервисы на карте</string>
     <string name="Chat">Чат с менеджером</string>
+    <string name="home_page">Домой</string>
 </resources>

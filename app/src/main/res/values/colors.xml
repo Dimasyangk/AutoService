@@ -21,5 +21,6 @@
     <color name="MenegerName">#FFC3C3</color>
     <color name="ChatSend">#F9E3E3</color>
     <color name="textchat">#908F8F</color>
+    <color name="app_bg">#ffffff</color>
 
 </resources>
