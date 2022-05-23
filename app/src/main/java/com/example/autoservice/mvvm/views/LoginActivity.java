@@ -6,13 +6,11 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.autoservice.R;
-import com.example.autoservice.MainActivity;
 import com.example.autoservice.service_record;
 import com.example.autoservice.mvvm.viewModels.LoginViewModel;
 
@@ -27,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
 
         emailAccess = (EditText) findViewById(R.id.email_enter);
         passwordAccess = (EditText) findViewById(R.id.password_enter);

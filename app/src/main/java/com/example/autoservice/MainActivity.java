@@ -1,49 +1,52 @@
 package com.example.autoservice;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.autoservice.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+        getSupportActionBar().hide();
 
-        Button buttonReg = (Button)findViewById(R.id.buttonReg);
-        buttonReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(MainActivity.this,registration_page.class);
-                    startActivity(intent); finish();
+        replaceFragment(new SearchTasksFragment());
 
-                }catch (Exception e) {
-
-                }
-                }
-        });
-
-        Button button_forgot = (Button)findViewById(R.id.button_forgot);
-        button_forgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try{
-                    Intent intent = new Intent(MainActivity.this,forgot_password.class);
-                    startActivity(intent); finish();
-
-                }catch (Exception e) {
-
-                }
-
+        binding.bottomNavigation.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.home_page:
+                    replaceFragment(new SearchTasksFragment());
+                    break;
+                case R.id.profile_page:
+                    replaceFragment(new FavoritesFragment());
+                    break;
+                case R.id.location_page:
+                    replaceFragment(new ResponsesFragment());
+                    break;
+                case R.id.chat_page:
+                    replaceFragment(new MessagesListFragment());
+                    break;
             }
+
+            return true;
         });
+    }
 
-
-
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(binding.fragmentHolder.getId(), fragment);
+        fragmentTransaction.commit();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.autoservice.mvvm.repos;
+package com.example.autoservice.mvvm.model.repos;
 
 import com.example.autoservice.mvvm.model.User;
 

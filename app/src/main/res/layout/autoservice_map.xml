@@ -21,7 +21,7 @@
         android:id="@+id/editTextPersonName6"
         android:layout_width="453dp"
         android:layout_height="58dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bottom_pan"
         android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
@@ -34,7 +34,6 @@
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 

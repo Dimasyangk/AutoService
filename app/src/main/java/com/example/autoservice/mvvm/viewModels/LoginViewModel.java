@@ -3,7 +3,7 @@ package com.example.autoservice.mvvm.viewModels;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.autoservice.mvvm.repos.UserRepository;
+import com.example.autoservice.mvvm.model.repos.UserRepository;
 
 public class LoginViewModel extends ViewModel {
 
