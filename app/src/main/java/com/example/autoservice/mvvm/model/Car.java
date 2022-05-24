@@ -9,6 +9,12 @@ public class Car {
         this.licensePlateNum = licensePlateNum;
     }
 
+    public Car() {
+        this.name = "ВАЗ 21130";
+        this.year = "2002";
+        this.licensePlateNum = "А 001 МР 77";
+    }
+
     public String getName() {
         return name;
     }

@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Recording {
     private int id;
+    private int userId;
     private String city, name, telephoneNumber;
     private String reason;
     private Date date;
@@ -11,9 +12,11 @@ public class Recording {
 
     private String whatWereDone, comment;
     private int price;
+    private Status status;
 
-    public Recording(int id, String city, String name, String telephoneNumber, String reason, Car car) {
+    public Recording(int id, int userId, String city, String name, String telephoneNumber, String reason, Car car) {
         this.id = id;
+        this.userId = userId;
         this.city = city;
         this.name = name;
         this.telephoneNumber = telephoneNumber;
@@ -24,6 +27,7 @@ public class Recording {
         this.whatWereDone = "Пока работа не была проделана";
         this.comment = "Комментарий отсуствует";
         this.price = 0;
+        this.status = Status.PROCESSING;
     }
 
     public String getCity() {
@@ -96,5 +100,29 @@ public class Recording {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recording_tile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EDEDED"
+    android:padding="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/recording_tile_car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ВАЗ 21130"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recording_tile_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="В работе"
+        android:textColor="#5C5C5C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recording_tile_reason"
+        android:layout_width="365dp"
+        android:layout_height="39dp"
+        android:text="Замена трапеции дворников, замена шаровой опоры правого переднего колеса"
+        android:textColor="#2E2E2E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recording_tile_car_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

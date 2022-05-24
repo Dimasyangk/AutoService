@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.autoservice.databinding.ActivityMainBinding;
+import com.example.autoservice.mvvm.views.ChatFragment;
 import com.example.autoservice.mvvm.views.HomeFragment;
 import com.example.autoservice.mvvm.views.LocationFragment;
 import com.example.autoservice.mvvm.views.ProfileFragment;
@@ -20,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
-        getSupportActionBar().hide();
 
+        View view = binding.getRoot();
+
+        setContentView(view);
         replaceFragment(new HomeFragment());
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
@@ -32,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new HomeFragment());
                     break;
                 case R.id.profile_page:
-                    replaceFragment(new ProfileFragment());
+                    //replaceFragment(new ProfileFragment());
                     break;
                 case R.id.location_page:
-                    replaceFragment(new LocationFragment());
+                    //replaceFragment(new LocationFragment());
                     break;
                 case R.id.chat_page:
-                    replaceFragment(new ChatFragment());
+                    //replaceFragment(new ChatFragment());
                     break;
             }
 

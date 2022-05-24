@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.autoservice.R;
 import com.example.autoservice.databinding.HomePageBinding;
 import com.example.autoservice.mvvm.adapters.DisplayRecordingsAdapter;
+import com.example.autoservice.mvvm.model.Recording;
 import com.example.autoservice.mvvm.viewModels.HomeViewModel;
 
 import java.util.ArrayList;
@@ -31,16 +32,16 @@ public class HomeFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         binding = HomePageBinding.bind(v);
 
-        final Observer<ArrayList<Task>> nameObserver = new Observer<ArrayList<Task>>() {
+        final Observer<ArrayList<Recording>> nameObserver = new Observer<ArrayList<Recording>>() {
             @Override
-            public void onChanged(@Nullable final ArrayList<Task> order) {
-                adapter = new DisplayTasksAdapter(order,requireContext(), viewModel);
+            public void onChanged(@Nullable final ArrayList<Recording> recordings) {
+                adapter = new DisplayRecordingsAdapter(recordings, requireContext(), viewModel);
                 recyclerView.setAdapter(adapter);
             }
         };
-        recyclerView = binding.actualTasksRecyclerView;
+        recyclerView = binding.recordingsRecyclerView;
 
-        viewModel.getActualTasks(v).observe(getViewLifecycleOwner(), nameObserver);
+        viewModel.getRecordings(v).observe(getViewLifecycleOwner(), nameObserver);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
