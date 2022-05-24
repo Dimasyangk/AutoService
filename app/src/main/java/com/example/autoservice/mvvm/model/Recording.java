@@ -3,6 +3,7 @@ package com.example.autoservice.mvvm.model;
 import java.util.Date;
 
 public class Recording {
+    private int id;
     private String city, name, telephoneNumber;
     private String reason;
     private Date date;
@@ -11,7 +12,8 @@ public class Recording {
     private String whatWereDone, comment;
     private int price;
 
-    public Recording(String city, String name, String telephoneNumber, String reason, Car car) {
+    public Recording(int id, String city, String name, String telephoneNumber, String reason, Car car) {
+        this.id = id;
         this.city = city;
         this.name = name;
         this.telephoneNumber = telephoneNumber;
@@ -86,5 +88,13 @@ public class Recording {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

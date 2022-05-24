@@ -9,6 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.autoservice.databinding.ActivityMainBinding;
+import com.example.autoservice.mvvm.views.HomeFragment;
+import com.example.autoservice.mvvm.views.LocationFragment;
+import com.example.autoservice.mvvm.views.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -21,21 +24,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
         getSupportActionBar().hide();
 
-        replaceFragment(new SearchTasksFragment());
+        replaceFragment(new HomeFragment());
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home_page:
-                    replaceFragment(new SearchTasksFragment());
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.profile_page:
-                    replaceFragment(new FavoritesFragment());
+                    replaceFragment(new ProfileFragment());
                     break;
                 case R.id.location_page:
-                    replaceFragment(new ResponsesFragment());
+                    replaceFragment(new LocationFragment());
                     break;
                 case R.id.chat_page:
-                    replaceFragment(new MessagesListFragment());
+                    replaceFragment(new ChatFragment());
                     break;
             }
 
