@@ -3,21 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/button_shape5.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/button_shape6.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/button_shape7.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/chat_client.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/chat_men.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/chat_send.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_account_box.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_account_circle.xml" value="0.2325" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_city.xml" value="0.1205" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_e_mail.xml" value="0.2325" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_home.xml" value="0.1205" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_operator.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_phone_num.xml" value="0.2325" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_profile_icon.xml" value="0.1205" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_question_answer.xml" value="0.1205" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_room_ic.xml" value="0.1205" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_user.xml" value="0.1205" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/input_backg.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/input_bg.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/main_rect.xml" value="0.2325" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/meneger_name.xml" value="0.2325" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/add_dataauto.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/add_record.xml" value="0.264" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/author_message_fragment.xml" value="0.4" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/autoservice_map.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/change_data.xml" value="0.25" />
-        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/chat_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/chat_page.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/done_jobs.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/home_page.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/profile_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/receiver_message_fragment.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/recording_fragment.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/registration_page.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/service_record.xml" value="0.25" />

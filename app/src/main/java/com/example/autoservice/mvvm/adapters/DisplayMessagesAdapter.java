@@ -11,13 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.autoservice.R;
 import com.example.autoservice.mvvm.model.Message;
-import com.example.autoservice.mvvm.model.Recording;
 import com.example.autoservice.mvvm.viewModels.ChatViewModel;
-import com.example.autoservice.mvvm.viewModels.HomeViewModel;
 
 import java.util.ArrayList;
 
-public class DisplayMessagesAdapter extends RecyclerView.Adapter<DisplayMessagesAdapter.DisplayMessagesViewHolder> {
+public class DisplayMessagesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ChatViewModel viewModel;
     private ArrayList<Message> messagesList;
     Context context;
@@ -28,20 +26,55 @@ public class DisplayMessagesAdapter extends RecyclerView.Adapter<DisplayMessages
         this.viewModel = viewModel;
     }
 
-    @NonNull
     @Override
-    public DisplayMessagesAdapter.DisplayMessagesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.author_message_fragment, parent, false);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater=LayoutInflater.from(parent.getContext());
+        RecyclerView.ViewHolder vh;
+        View itemLayoutView;
 
-        return new DisplayMessagesAdapter.DisplayMessagesViewHolder(view);
+        switch (viewType)
+        {
+            case 0:
+                itemLayoutView = inflater.inflate(R.layout.author_message_fragment, parent, false);
+                vh = new AuthorMessageViewHolder(itemLayoutView);
+                break;
+            case 1:
+                itemLayoutView = inflater.inflate(R.layout.receiver_message_fragment, parent, false);
+                vh = new ReceiverMessageViewHolder(itemLayoutView);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + viewType);
+        }
+
+        return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DisplayMessagesAdapter.DisplayMessagesViewHolder holder, int position) {
-        final Message tempMessage = messagesList.get(position);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        switch (this.getItemViewType(position))
+        {
+            case 0:
+                AuthorMessageViewHolder authorMessageViewHolder = (AuthorMessageViewHolder) holder;
+                ((AuthorMessageViewHolder) holder).text.setText(messagesList.get(position).getTextMessage());
+                break;
+            case 1:
+                ReceiverMessageViewHolder receiverMessageViewHolder = (ReceiverMessageViewHolder) holder;
+                ((ReceiverMessageViewHolder) holder).text.setText(messagesList.get(position).getTextMessage());
+                break;
+        }
+    }
 
-        holder.text.setText(tempMessage.getTextMessage());
+    @Override
+    public int getItemViewType(int position) {
+        if (messagesList.get(position).getAuthorId() == 1) {
+            return 0;
+        }
+        else if (messagesList.get(position).getReceiverId() == 1) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
     }
 
     @Override
@@ -49,13 +82,21 @@ public class DisplayMessagesAdapter extends RecyclerView.Adapter<DisplayMessages
         return messagesList.size();
     }
 
+    public static class AuthorMessageViewHolder extends RecyclerView.ViewHolder {
+        public TextView text;
 
-    public static class DisplayMessagesViewHolder extends RecyclerView.ViewHolder {
-        TextView text;
-
-        public DisplayMessagesViewHolder(@NonNull View itemView) {
+        public AuthorMessageViewHolder(View itemView) {
             super(itemView);
             text = itemView.findViewById(R.id.author_text);
+        }
+    }
+
+    public static class ReceiverMessageViewHolder extends RecyclerView.ViewHolder {
+        public TextView text;
+
+        public ReceiverMessageViewHolder(View itemView) {
+            super(itemView);
+            text = itemView.findViewById(R.id.receiver_text);
         }
     }
 }

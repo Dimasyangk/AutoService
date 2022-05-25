@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new HomeFragment());
                     break;
                 case R.id.profile_page:
-                    //replaceFragment(new ProfileFragment());
+                    replaceFragment(new ProfileFragment());
                     break;
                 case R.id.location_page:
-                    //replaceFragment(new LocationFragment());
+                    replaceFragment(new LocationFragment());
                     break;
                 case R.id.chat_page:
-                    //replaceFragment(new ChatFragment());
+                    replaceFragment(new ChatFragment());
                     break;
             }
 
