@@ -14,6 +14,8 @@ public class Recording {
     private int price;
     private Status status;
 
+    private String doneWork;
+
     public Recording(int id, int userId, String city, String name, String telephoneNumber, String reason, Car car) {
         this.id = id;
         this.userId = userId;
@@ -28,6 +30,8 @@ public class Recording {
         this.comment = "Комментарий отсуствует";
         this.price = 0;
         this.status = Status.PROCESSING;
+
+        this.doneWork = "Отсутсвует";
     }
 
     public String getCity() {
@@ -124,5 +128,17 @@ public class Recording {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public String getDoneWork() {
+        return doneWork;
+    }
+
+    public void setDoneWork(String doneWork) {
+        this.doneWork = doneWork;
+    }
+
+    public void addDoneWork(String doneWork) {
+        this.doneWork = this.doneWork + ", " + doneWork;
     }
 }

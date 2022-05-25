@@ -19,7 +19,6 @@ public class HomeViewModel extends ViewModel {
         if (currentRecordings == null) {
             currentRecordings = new MutableLiveData<ArrayList<Recording>>();
         }
-        //currentRecordings.setValue(recordingRepository.getUserRecordings(1));
         currentRecordings.setValue(recordingRepository.getUserRecordings(1));
 
         return currentRecordings;

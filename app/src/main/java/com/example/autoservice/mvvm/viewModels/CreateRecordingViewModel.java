@@ -2,14 +2,16 @@ package com.example.autoservice.mvvm.viewModels;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.autoservice.mvvm.model.Recording;
+import com.example.autoservice.mvvm.model.User;
 import com.example.autoservice.repository.RecordingRepository;
+import com.example.autoservice.repository.UserRepository;
 
 public class CreateRecordingViewModel extends ViewModel {
-    private RecordingRepository repository = RecordingRepository.getInstance();
+    private RecordingRepository recordingRepository = RecordingRepository.getInstance();
+    private UserRepository userRepository = UserRepository.getInstance();
 
     public void makeRecording(String city, String name, String num, String carName, String carYear, String carNum, String reason) {
-        repository.addRecording(1,
+        recordingRepository.addRecording(1,
                 city,
                 name,
                 num,
@@ -17,5 +19,9 @@ public class CreateRecordingViewModel extends ViewModel {
                 carName,
                 carYear,
                 carNum);
+    }
+
+    public User getCurrentUser() {
+        return userRepository.getCurrentUser();
     }
 }
