@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -44,6 +46,19 @@ public class HomeFragment extends Fragment {
         viewModel.getRecordings(v).observe(getViewLifecycleOwner(), nameObserver);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
         recyclerView.setLayoutManager(gridLayoutManager);
+
+        Button makeRecordingButton = binding.addRecordButton;
+
+        makeRecordingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment someFragment = new CreateRecordingFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragmentHolder, someFragment );
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         return v;
     }

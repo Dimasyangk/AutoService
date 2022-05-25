@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/add_recordButton"
+        android:id="@+id/add_record_button"
         android:layout_width="206dp"
         android:layout_height="39dp"
         android:layout_marginTop="35dp"
@@ -80,7 +80,7 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_recordButton" />
+        app:layout_constraintTop_toBottomOf="@+id/add_record_button" />
 
     <TextView
         android:id="@+id/textView9"

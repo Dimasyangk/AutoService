@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPersonName"
+        android:id="@+id/addRecordingCity"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="20dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editTextPersonName2"
+        android:id="@+id/addRecordingName"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="10dp"
@@ -56,10 +56,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCity" />
 
     <EditText
-        android:id="@+id/editTextPersonName3"
+        android:id="@+id/addRecordingTelephone"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="10dp"
@@ -76,7 +76,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingName" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ChangePassButton"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingTelephone" />
 
     <TextView
         android:id="@+id/textView15"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ChangePassButton" />
 
     <EditText
-        android:id="@+id/editTextPersonName4"
+        android:id="@+id/addRecordingCarName"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <EditText
-        android:id="@+id/editTextPersonName5"
+        android:id="@+id/addRecordingReason"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="10dp"
@@ -141,7 +141,7 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCarName" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Change"
@@ -153,10 +153,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingReason" />
 
     <EditText
-        android:id="@+id/editTextPersonName6"
+        android:id="@+id/addRecordingDate"
         android:layout_width="453dp"
         android:layout_height="58dp"
         android:layout_marginTop="77dp"
@@ -182,8 +182,8 @@
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextPersonName6"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:layout_constraintStart_toStartOf="@+id/addRecordingDate"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingDate"
         app:srcCompat="@drawable/ic_home" />
 
     <ImageView
@@ -193,7 +193,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingDate"
         app:srcCompat="@drawable/ic_account_box" />
 
     <ImageView
@@ -203,7 +203,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingDate"
         app:srcCompat="@drawable/ic_room_ic" />
 
     <ImageView
@@ -212,8 +212,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="52dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName6"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingDate"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingDate"
         app:srcCompat="@drawable/ic_question_answer" />
 
     <ImageView
@@ -221,9 +221,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName2"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName2"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordingName"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingName"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingName"
         app:srcCompat="@drawable/ic_eye_icon" />
 
     <ImageView
@@ -231,8 +231,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName3"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordingTelephone"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingTelephone"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingTelephone"
         app:srcCompat="@drawable/ic_eye_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,27 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/addRecordingHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/podkova_extrabold"
         android:text="@string/ServiceRecord"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPersonName"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="34dp"
+        android:id="@+id/addRecordingCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
@@ -32,17 +33,18 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Введите ваш город"
+        android:hint="Введите ваш город"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingHeader" />
 
     <EditText
-        android:id="@+id/editTextPersonName2"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
+        android:id="@+id/addRecordingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
@@ -52,17 +54,40 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Введите ваше имя"
+        android:hint="Введите ваше имя"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCity" />
 
+    <com.example.autoservice.MaskedEditText
+        android:id="@+id/addRecordingTelephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="phone"
+        android:padding="14dp"
+        android:hint="+7 (999) 999-99-99"
+        android:textColorHint="#D8D8D8"
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:mask="+9 (999) 999-99-99"
+        app:placeholder="_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingName" />
     <EditText
-        android:id="@+id/editTextPersonName3"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
+        android:id="@+id/addRecordingCarName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
@@ -72,18 +97,19 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Введите почту или телефон для обратной связи"
+        android:hint="Введите марку авто"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingTelephone" />
 
     <EditText
-        android:id="@+id/editTextPersonName4"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/addRecordingCarYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
@@ -92,32 +118,56 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Введите данные об авто"
+        android:hint="Введите год выпуска"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCarName" />
+
+    <com.example.autoservice.MaskedEditText
+        android:id="@+id/addRecordingCarNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/input_backg"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:fontFamily="@font/podkova"
+        android:foregroundTint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:hint="А 000 АА 77"
+        android:textColorHint="#D8D8D8"
+        android:textColor="@color/ColorRect"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCarYear"
+        app:mask="A 999 AA 99"
+        app:placeholder="_" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="275dp"
         android:layout_height="35dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/RecordWarning"
         android:textColor="@color/ColorBut4"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCarNum" />
 
     <EditText
-        android:id="@+id/editTextPersonName5"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="25dp"
+        android:id="@+id/addRecordingReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
@@ -126,7 +176,8 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Опишите причину обращения"
+        android:hint="Опишите причину обращения"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,9 +185,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editTextPersonName6"
-        android:layout_width="347dp"
-        android:layout_height="51dp"
+        android:id="@+id/addRecordingDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/input_backg"
         android:backgroundTint="@color/black"
@@ -146,12 +197,13 @@
         android:foregroundTint="@color/white"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:text="Введите дату обслуживания"
+        android:hint="Введите дату обслуживания"
+        android:textColorHint="#D8D8D8"
         android:textColor="@color/ColorRect"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingReason" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -160,80 +212,21 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName6"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName6"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName6"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordingDate"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingDate"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingDate"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_calendar" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonContinue"
+        android:id="@+id/addRecordingButtonSubmit"
         android:layout_width="229dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_shape"
         android:text="@string/ContinueButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextPersonName9"
-        android:layout_width="453dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/bottom_pan"
-        android:backgroundTint="@color/black"
-        android:backgroundTintMode="add"
-        android:ems="10"
-        android:fontFamily="@font/podkova"
-        android:foregroundTint="@color/white"
-        android:inputType="textPersonName"
-        android:padding="14dp"
-        android:text=""
-        android:textColor="@color/ColorRect"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonContinue" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingDate" />
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextPersonName9"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName9"
-        app:srcCompat="@drawable/ic_home" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName9"
-        app:srcCompat="@drawable/ic_account_box" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName9"
-        app:srcCompat="@drawable/ic_room_ic" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName9"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName9"
-        app:srcCompat="@drawable/ic_question_answer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

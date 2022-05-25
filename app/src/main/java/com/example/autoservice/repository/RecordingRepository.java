@@ -24,8 +24,23 @@ public class RecordingRepository {
         return instance;
     }
 
-    public void addRecording(Recording recording) {
+    public void addExistingRecording(Recording recording) {
         recordings.add(recording);
+    }
+
+    public void addRecording(
+            int userId,
+            String city,
+            String name,
+            String num,
+            String reason,
+            String carName,
+            String carYear,
+            String carNum) {
+        Car car = new Car(carName, carYear, carNum);
+        Recording recording = new Recording(recordingCounter, userId, city, name, num, reason, car);
+        recordings.add(recording);
+        recordingCounter++;
     }
 
     public Recording getRecordingById(int id) {
@@ -69,7 +84,7 @@ public class RecordingRepository {
                 new Car()
         );
         recordingCounter++;
-        addRecording(recording1);
+        addExistingRecording(recording1);
 
         Recording recording2 = new Recording(
                 recordingCounter,
@@ -81,7 +96,7 @@ public class RecordingRepository {
                 new Car()
         );
         recordingCounter++;
-        addRecording(recording2);
+        addExistingRecording(recording2);
 
         Recording recording3 = new Recording(
                 recordingCounter,
@@ -93,6 +108,6 @@ public class RecordingRepository {
                 new Car()
         );
         recordingCounter++;
-        addRecording(recording3);
+        addExistingRecording(recording3);
     }
 }
