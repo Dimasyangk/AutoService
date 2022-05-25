@@ -7,12 +7,12 @@ import java.util.ArrayList;
 
 public class UserRepository {
     private static UserRepository instance;
-    private int UserCounter = 10000000;
+    private int userCounter = 10000000;
 
     public ArrayList<User> users = new ArrayList<>();
 
     public UserRepository() {
-
+        createTestUser();
     }
 
     public static UserRepository getInstance() {
@@ -20,5 +20,15 @@ public class UserRepository {
             instance = new UserRepository();
         }
         return instance;
+    }
+
+    public void createTestUser() {
+        User user = new User(1, "Дима", "Ногинск", "+7 (888) 888-88-88");
+        userCounter++;
+        users.add(user);
+    }
+
+    public User getCurrentUser() {
+        return users.get(0);
     }
 }
