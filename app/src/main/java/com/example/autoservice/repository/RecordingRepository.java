@@ -136,7 +136,8 @@ public class RecordingRepository {
         recording4.getCar().setYear("2010");
         recording4.getCar().setLicensePlateNum("А 001 ОО 77");
         recording4.setStatus(Status.DONE);
-        recording4.addDoneWork("Заменена левая дверь полностью");
+        recording4.setDoneWork("Сход-развал");
+        recording4.addDoneWork("заменена левая дверь полностью");
         recording4.addDoneWork("заменена головка ГБЦ");
         recordingCounter++;
         addExistingRecording(recording4);

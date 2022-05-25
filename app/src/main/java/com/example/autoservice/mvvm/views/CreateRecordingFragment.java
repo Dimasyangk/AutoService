@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.autoservice.R;
 import com.example.autoservice.databinding.AddRecordBinding;
 import com.example.autoservice.databinding.HomePageBinding;
+import com.example.autoservice.mvvm.model.User;
 import com.example.autoservice.mvvm.viewModels.CreateRecordingViewModel;
 import com.example.autoservice.mvvm.viewModels.HomeViewModel;
 
@@ -29,6 +30,18 @@ public class CreateRecordingFragment extends Fragment {
         View v = inflater.inflate(R.layout.add_record, container, false);
         viewModel = new ViewModelProvider(this).get(CreateRecordingViewModel.class);
         binding = AddRecordBinding.bind(v);
+
+        User user = viewModel.getCurrentUser();
+        if (!user.getCity().equals("N/A")) {
+            binding.addRecordingCity.setText(user.getCity());
+        }
+        if (!user.getName().equals("N/A")) {
+            binding.addRecordingName.setText(user.getName());
+        }
+        if (!user.getTel().equals("N/A")) {
+            binding.addRecordingTelephone.setText(user.getTel());
+        }
+
 
         Button submitButton = binding.addRecordingButtonSubmit;
         submitButton.setOnClickListener(new View.OnClickListener() {
