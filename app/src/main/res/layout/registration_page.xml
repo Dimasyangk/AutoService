@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPersonName"
+        android:id="@+id/addRecordingCity"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="84dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegistrationPage" />
 
     <EditText
-        android:id="@+id/editTextPersonName2"
+        android:id="@+id/addRecordingName"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -57,10 +57,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingCity" />
 
     <EditText
-        android:id="@+id/editTextPersonName3"
+        android:id="@+id/addRecordingTelephone"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -77,10 +77,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingName" />
 
     <EditText
-        android:id="@+id/editTextPersonName4"
+        android:id="@+id/addRecordingCarName"
         android:layout_width="347dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -97,16 +97,16 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/addRecordingTelephone" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName3"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordingTelephone"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingTelephone"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingTelephone"
         app:srcCompat="@drawable/ic_eye_icon" />
 
     <ImageView
@@ -114,9 +114,9 @@
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPersonName4"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPersonName4"
-        app:layout_constraintTop_toTopOf="@+id/editTextPersonName4"
+        app:layout_constraintBottom_toBottomOf="@+id/addRecordingCarName"
+        app:layout_constraintEnd_toEndOf="@+id/addRecordingCarName"
+        app:layout_constraintTop_toTopOf="@+id/addRecordingCarName"
         app:srcCompat="@drawable/ic_eye_icon" />
 
     <androidx.appcompat.widget.AppCompatButton

@@ -11,9 +11,16 @@
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/drawable/ic_user.xml" value="0.1205" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/add_dataauto.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/add_record.xml" value="0.264" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/autoservice_map.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/change_data.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/chat_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/done_jobs.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/home_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/profile_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/recording_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/registration_page.xml" value="0.25" />
+        <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/layout/service_record.xml" value="0.25" />
         <entry key="..\:/Users/studi/Documents/GitHub/AutoService/app/src/main/res/menu/bottom_nav.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/xiomi/Desktop/MIMREA/MobileDevelop/Project/app/src/debug/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/xiomi/Desktop/MIMREA/MobileDevelop/Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
