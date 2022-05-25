@@ -23,7 +23,7 @@ public class UserRepository {
     }
 
     public void createTestUser() {
-        User user = new User(1, "Дима", "Ногинск", "+7 (888) 888-88-88");
+        User user = new User(1, "N/A", "N/A", "N/A");
         userCounter++;
         users.add(user);
     }

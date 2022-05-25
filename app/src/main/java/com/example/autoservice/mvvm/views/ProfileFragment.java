@@ -8,7 +8,9 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.autoservice.R;
@@ -16,9 +18,13 @@ import com.example.autoservice.databinding.AutoserviceMapBinding;
 import com.example.autoservice.databinding.ProfilePageBinding;
 import com.example.autoservice.mvvm.adapters.DisplayCarWorkAdapter;
 import com.example.autoservice.mvvm.adapters.DisplayCarsAdapter;
+import com.example.autoservice.mvvm.adapters.DisplayRecordingsAdapter;
+import com.example.autoservice.mvvm.model.Recording;
 import com.example.autoservice.mvvm.model.User;
 import com.example.autoservice.mvvm.viewModels.LocationViewModel;
 import com.example.autoservice.mvvm.viewModels.ProfileViewModel;
+
+import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
     private ProfileViewModel viewModel;
@@ -50,6 +56,19 @@ public class ProfileFragment extends Fragment {
                 viewModel.getCurrentUser().getValue().setTel(newTel);
             }
         });
+
+        final Observer<ArrayList<Recording>> nameObserver = new Observer<ArrayList<Recording>>() {
+            @Override
+            public void onChanged(@Nullable final ArrayList<Recording> recordings) {
+                adapter = new DisplayCarWorkAdapter(recordings, requireContext(), viewModel);
+                recyclerView.setAdapter(adapter);
+            }
+        };
+        recyclerView = binding.profileRecyclerView;
+
+        viewModel.getDoneRecordings(v).observe(getViewLifecycleOwner(), nameObserver);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
         return v;
     }

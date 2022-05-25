@@ -55,8 +55,8 @@ public class DisplayRecordingsAdapter extends RecyclerView.Adapter<DisplayRecord
 
         public DisplayRecordingsViewHolder(@NonNull View itemView) {
             super(itemView);
-            carName = itemView.findViewById(R.id.recording_tile_car_name);
-            status = itemView.findViewById(R.id.recording_tile_status);
+            carName = itemView.findViewById(R.id.car_tile_name);
+            status = itemView.findViewById(R.id.car_tile_year);
             description = itemView.findViewById(R.id.recording_tile_reason);
         }
     }

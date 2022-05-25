@@ -2,6 +2,7 @@ package com.example.autoservice.repository;
 
 import com.example.autoservice.mvvm.model.Car;
 import com.example.autoservice.mvvm.model.Recording;
+import com.example.autoservice.mvvm.model.Status;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,6 +68,18 @@ public class RecordingRepository {
         return userRecordings;
     }
 
+    public ArrayList<Recording> getDoneUserRecordings(int userId) {
+        ArrayList<Recording> doneUserRecordings = new ArrayList<>();
+
+        for (Recording recording : recordings) {
+            if (recording.getUserId() == userId && recording.getStatus().equals(Status.DONE)) {
+                doneUserRecordings.add(recording);
+            }
+        }
+
+        return doneUserRecordings;
+    }
+
     public ArrayList<Recording> getAllRecordings() {
         return recordings;
     }
@@ -109,5 +122,23 @@ public class RecordingRepository {
         );
         recordingCounter++;
         addExistingRecording(recording3);
+
+        Recording recording4 = new Recording(
+                recordingCounter,
+                1,
+                "Moscow",
+                "Дмитрий",
+                "+7 (924) 657-54-55",
+                "Капиталка",
+                new Car()
+        );
+        recording4.getCar().setName("Volkswagen Polo");
+        recording4.getCar().setYear("2010");
+        recording4.getCar().setLicensePlateNum("А 001 ОО 77");
+        recording4.setStatus(Status.DONE);
+        recording4.addDoneWork("Заменена левая дверь полностью");
+        recording4.addDoneWork("заменена головка ГБЦ");
+        recordingCounter++;
+        addExistingRecording(recording4);
     }
 }
