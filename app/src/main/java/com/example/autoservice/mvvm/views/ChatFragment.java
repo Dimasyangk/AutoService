@@ -56,7 +56,11 @@ public class ChatFragment extends Fragment {
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // отправка сообщения
+                String messageText = binding.chatMessageText.getText().toString();
+
+                viewModel.sendMessage(messageText);
+                binding.chatMessageText.setText("");
+                viewModel.getMessages(v).observe(getViewLifecycleOwner(), nameObserver);
             }
         });
 

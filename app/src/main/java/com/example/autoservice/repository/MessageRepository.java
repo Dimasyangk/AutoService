@@ -12,6 +12,7 @@ public class MessageRepository {
     public ArrayList<Message> messages = new ArrayList<>();
 
     public MessageRepository() {
+        fillConversationWithStartMessage();
     }
 
     public static MessageRepository getInstance() {
@@ -30,19 +31,16 @@ public class MessageRepository {
     public ArrayList<Message> getConversationByUserId(int userId) {
         ArrayList<Message> conversation = new ArrayList<>();
 
-        Message message1 = new Message(messageId, "Привет!", 12, 1);
-        messageId++;
-        Message message2 = new Message(messageId, "Тевирп!", 1, 12);
-        messageId++;
-        conversation.add(message1);
-        conversation.add(message2);
-        /*
         for (Message message : messages) {
             if (message.getAuthorId() == userId || message.getReceiverId() == userId) {
                 conversation.add(message);
             }
         }
-        */
+
         return conversation;
+    }
+
+    private void fillConversationWithStartMessage() {
+        addMessage("Привет!", 12, 1);
     }
 }

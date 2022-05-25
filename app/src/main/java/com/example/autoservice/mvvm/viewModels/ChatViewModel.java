@@ -19,8 +19,12 @@ public class ChatViewModel extends ViewModel {
         if (currentMessages == null) {
             currentMessages = new MutableLiveData<ArrayList<Message>>();
         }
-        currentMessages.setValue(repository.getConversationByUserId(1)); // баг отсюда
+        currentMessages.setValue(repository.getConversationByUserId(1));
 
         return currentMessages;
+    }
+
+    public void sendMessage(String text) {
+        repository.addMessage(text, 1, 12);
     }
 }
